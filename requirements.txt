@@ -1,0 +1,4 @@
+# Root requirements for the Vercel Python function (api/index.py).
+# The backend's own requirements live in backend/requirements.txt.
+fastapi==0.115.6
+httpx==0.28.1

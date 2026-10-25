@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Runtime data (the bundled snapshot jan2026_snapshot.json IS tracked on purpose)
+backend/data/cache/
+
+# Misc
+.env
+.DS_Store

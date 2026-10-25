@@ -1,0 +1,81 @@
+:root {
+  --bg: #0b1526;
+  --bg-panel: #111f38;
+  --bg-panel-2: #16263f;
+  --border: #24405f;
+  --text: #e8eef6;
+  --muted: #9db2c8;
+  --teal: #2dd4bf;
+  --amber: #f5a623;
+  --red: #f87171;
+  --green: #4ade80;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+a { color: var(--teal); }
+.app { max-width: 1180px; margin: 0 auto; padding: 0 20px 64px; }
+header.hero {
+  padding: 32px 0 8px;
+}
+header.hero h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: 0.2px; }
+header.hero p.sub { color: var(--muted); margin: 0; font-size: 17px; max-width: 860px; }
+.badge {
+  display: inline-block; background: var(--bg-panel-2); border: 1px solid var(--border);
+  color: var(--teal); border-radius: 999px; padding: 2px 12px; font-size: 13px; margin-bottom: 12px;
+}
+nav.tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 24px 0 20px; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+nav.tabs button {
+  background: var(--bg-panel); color: var(--muted); border: 1px solid var(--border);
+  border-radius: 8px; padding: 10px 18px; font-size: 16px; cursor: pointer;
+}
+nav.tabs button.active { background: var(--teal); color: #06231f; font-weight: 700; border-color: var(--teal); }
+.controls { display: flex; gap: 20px; flex-wrap: wrap; align-items: end; margin-bottom: 20px; }
+.control label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.6px; }
+.control select {
+  background: var(--bg-panel-2); color: var(--text); border: 1px solid var(--border);
+  border-radius: 8px; padding: 10px 12px; font-size: 16px; min-width: 240px;
+}
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 20px; }
+.kpi { background: var(--bg-panel); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+.kpi .label { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; }
+.kpi .value { font-size: 32px; font-weight: 700; margin: 4px 0; }
+.kpi .value.teal { color: var(--teal); }
+.kpi .value.amber { color: var(--amber); }
+.kpi .value.red { color: var(--red); }
+.kpi .hint { font-size: 14px; color: var(--muted); }
+.panel { background: var(--bg-panel); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+.panel h2 { margin: 0 0 8px; font-size: 21px; }
+.panel h3 { margin: 16px 0 6px; font-size: 17px; }
+.panel p { color: var(--text); }
+.panel p.muted, .muted { color: var(--muted); }
+.panel.trap { border-color: var(--amber); background: #231d10; }
+.panel.trap h2 { color: var(--amber); }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { padding: 8px 10px; border-bottom: 1px solid var(--border); text-align: right; }
+th { color: var(--muted); font-weight: 600; }
+td:first-child, th:first-child { text-align: left; }
+tr.selected-row td { background: rgba(45, 212, 191, 0.12); font-weight: 600; }
+tr.after-gate td { color: #5f748c; }
+tr.worst td { color: var(--red); }
+.pill { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13px; border: 1px solid var(--border); }
+.pill.ok { color: var(--green); border-color: var(--green); }
+.pill.no { color: #5f748c; }
+.pill.sel { background: var(--teal); color: #06231f; font-weight: 700; border-color: var(--teal); }
+.gate-line { border-left: 4px solid var(--amber); padding: 10px 14px; background: #231d10; border-radius: 6px; margin: 14px 0; font-weight: 600; }
+.error-box { background: #2a1215; border: 1px solid var(--red); border-radius: 10px; padding: 16px; }
+.formula { font-family: Consolas, "Courier New", monospace; background: var(--bg-panel-2); border-radius: 6px; padding: 2px 8px; }
+ul.tight li { margin-bottom: 6px; }
+.chart-wrap { width: 100%; height: 340px; }
+footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); padding-top: 16px; margin-top: 8px; }
+@media (max-width: 640px) {
+  header.hero h1 { font-size: 24px; }
+  .kpi .value { font-size: 26px; }
+  .control select { min-width: 100%; }
+}
