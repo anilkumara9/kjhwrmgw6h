@@ -18,7 +18,7 @@ decision deadline. Nothing published later is allowed to flatter the numbers.
 > DST adjustment applies. At that gate, the latest available WINDFOR run is the **09:30 D-1**
 > publication (lead times 14.5 h for the 00:00 delivery hour to 37.5 h for 23:00).
 
-**Live app:** _add your Vercel/Heroku URL here after deploying (see `DEPLOYMENT.md`)._
+**Deployment:** see `DEPLOYMENT.md` (Vercel serverless or Docker).
 
 ---
 
@@ -93,8 +93,6 @@ records; 744 hours total).
 reint-wind-forecast/
 ├── README.md                  ← this file
 ├── DEPLOYMENT.md              ← Vercel / container deployment guide
-├── VIDEO_SCRIPT.md            ← 2-part video script (client pitch + tech walkthrough)
-├── SUBMISSION_CHECKLIST.md    ← repo / video / form submission steps
 ├── docker-compose.yml         ← backend :8000 + frontend :8080
 ├── vercel.json                ← Vercel static frontend + Python serverless API
 ├── requirements.txt           ← root deps for the Vercel Python function
@@ -229,11 +227,6 @@ See **`DEPLOYMENT.md`** — frontend on Vercel, backend either as a Vercel serve
 from this same repo (`api/index.py` + `vercel.json`) or on any container host via the
 Dockerfiles / docker-compose. The bundled snapshot makes the serverless deployment work
 without live Elexon access.
-
-## Video
-
-See **`VIDEO_SCRIPT.md`** — Part 1 (≤ 5 min) client pitch, Part 2 (≤ 5 min) technical-lead
-walkthrough, with timings and on-screen actions.
 
 ## AI tools disclosure
 

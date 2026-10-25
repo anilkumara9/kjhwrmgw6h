@@ -15,7 +15,7 @@ Two supported shapes. Both serve the same app; pick one.
 
 Steps:
 
-1. Push this repo to GitHub (anonymous name — see `SUBMISSION_CHECKLIST.md`).
+1. Push this repo to GitHub (use an anonymous name).
 2. In Vercel: **New Project → Import** the repo. Framework preset: **Other** (the repo's
    `vercel.json` drives the build). No environment variables are required.
 3. Deploy. Open the generated URL and check `/api/health` returns `{"status":"ok"}`.
